@@ -2,4 +2,4 @@
 title: Button
 ---
 
-[Insert description here]
+Standard button used on site

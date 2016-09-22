@@ -27,13 +27,19 @@
 // styles for all the forms.
 @import
   'layout/header',
+  'layout/form',
   'layout/footer';
 
 // For small components, there is the `components/` folder.
 // It contains all kind of specific modules like a slider, a loader, a widget,
 // and basically anything along those lines.
 @import
-  'components/button';
+  'components/button',
+  'components/hero',
+  'components/logo',
+  'components/card',
+  'components/anouncement',
+  'components/media';
 
 // If you have page-specific styles, it is better to put them
 // in a `pages/` folder, in a file named after the page

@@ -1,0 +1,52 @@
+.cards {
+  background: $porcelain;
+}
+
+.cards__container {
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 1rem;
+
+  @include apply-if('sprout') {
+    flex-flow: row wrap;
+    max-width: $max-width;
+    margin: auto;
+  }
+}
+
+.card {
+  display: flex;
+  margin: 1rem 1rem 0;
+  background: $white;
+  flex-flow: column;
+
+  @include apply-if('sprout') {
+    flex: 1 calc(50% - 1rem);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  @include apply-if('plant') {
+    flex: 1 calc(25% - 1rem);
+  }
+}
+
+.card__media {
+  width: 100%;
+  height: auto;
+}
+
+.card__headline {
+  font-size: 28px;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.card :not(.card__media) {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @include apply-if('plant') {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

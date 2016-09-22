@@ -1,7 +1,29 @@
-/**
- * Basic typography style for copy text and ui elements
- */
+// -----------------------------------------------------------------------------
+// Basic Typography style for every element
+// -----------------------------------------------------------------------------
+
+/// THis applies the font to all UI elements, and text.
 :root {
+  font: 14px / 1.73 $text-font-stack;
   color: $text-color;
-  font: normal 1.25em / 1.53 $text-font-stack;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2,
+h3,
+h4 {
+  font-size: 28px;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $royal-blue;
 }

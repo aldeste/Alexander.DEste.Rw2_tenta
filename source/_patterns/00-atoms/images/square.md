@@ -2,4 +2,4 @@
 title: Square Image
 ---
 
-[Insert description here]
+Square images, for promotional brands

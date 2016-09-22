@@ -2,4 +2,4 @@
 title: Text Field
 ---
 
-[Insert description here]
+Text field used for basic text inputs

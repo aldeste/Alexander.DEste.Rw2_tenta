@@ -4,30 +4,20 @@
 
 /// Colors across project
 /// @type Color
-$text-color: rgb(34, 34, 34);
-$brand-color: rgb(229, 0, 80);
-$light-grey: rgb(237, 237, 237);
-$mid-grey: rgb(153, 153, 153);
-$dark-grey: rgb(68, 68, 68);
+$royal-blue: hsl(220, 72%, 55%);
+$white: hsl(0, 0%, 100%);
+$porcelain: hsl(200, 12%, 95%);
+$woodsmoke: hsl(202, 17%, 9%);
+$mid-gray: hsl(249, 3%, 38%);
+$baltic-sea: hsl(249, 6%, 18%);
+
+$text-color: $woodsmoke;
 
 /// Regular font family
 /// @type List
 $text-font-stack: (
-  'Helvetica Neue Light',
-  'Helvetica Neue',
-  'Helvetica',
-  'Arial',
+  'Fira Sans',
   sans-serif,
-);
-
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: (
-  'Monaco',
-  'Courier New',
-  'DejaVu Sans Mono',
-  'Bitstream Vera Sans Mono',
-  monospace,
 );
 
 /// Container's maximum width
@@ -39,8 +29,8 @@ $max-width: 1180px;
 /// @prop {Length} values - Length of brekapoint
 $breakpoints: (
   'seed': 320px,
-  'sprout': 768px,
-  'plant': 1024px,
+  'sprout': 640px,
+  'plant': 960px,
 );
 
 /// Z-indexes map
@@ -48,6 +38,7 @@ $breakpoints: (
 /// @prop {Number} value - Z value of key
 $z-indexes: (
   'modal': 900,
+  'above-images': 400,
   'default': 1,
 );
 

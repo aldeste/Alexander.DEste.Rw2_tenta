@@ -20,20 +20,13 @@
     {
       "label": "My Homepage",
       "url": "http://localhost:8080/patterns/04-pages-00-homepage/04-pages-00-homepage.html",
-      "hideSelectors": [],
-      "removeSelectors": [
-        "#carbonads"
-      ],
       "selectors": [
-        "header",
-        "main",
-        "body .bs-docs-featurette:nth-of-type(1)",
-        "body .bs-docs-featurette:nth-of-type(2)",
-        "footer",
-        "body"
+        ".header__container",
+        ".cards__container",
+        ".footer__container"
       ],
       "readyEvent": null,
-      "delay": 500,
+      "delay": 5000,
       "misMatchThreshold" : 0.1,
       "onBeforeScript": "onBefore.js",
       "onReadyScript": "onReady.js"

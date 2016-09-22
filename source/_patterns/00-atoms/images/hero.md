@@ -2,4 +2,4 @@
 title: Hero Image
 ---
 
-[Insert description here]
+Hero image used on main page

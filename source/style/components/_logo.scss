@@ -1,0 +1,23 @@
+.logo {
+  white-space: nowrap;
+  text-transform: uppercase;
+  background: $white;
+}
+
+.logo__text {
+  line-height: 1;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  letter-spacing: -5em;
+  color: transparent;
+
+  @include apply-if('seed') {
+    letter-spacing: 0;
+    color: $royal-blue;
+  }
+}
+
+.logo__span {
+  letter-spacing: 0;
+  color: $royal-blue;
+}

@@ -1,5 +1,28 @@
-import isLeapYear from 'sauce';
+import countryGenerator from 'countries';
 
-const eggs = () => [0, 1, 2, 3];
+(() => {
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
 
-console.log(isLeapYear(2073));
+  function toggle(string) {
+    if (string === 'none') {
+      return 'flex';
+    }
+    return 'none';
+  }
+
+  function toggleMenu() {
+    nav.style.display = toggle(nav.style.display);
+  }
+
+  hamburger.addEventListener('click', toggleMenu, false);
+})();
+
+function changeCountry() {
+  const el = document.querySelector('.hero__headline span');
+
+  el.innerHTML = countryGenerator();
+  setTimeout(changeCountry, 1800);
+}
+
+changeCountry();

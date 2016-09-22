@@ -8,37 +8,86 @@
     "htmlClass": "pl",
     "bodyClass": "body",
     "btnText" : "Button",
-    "progress" : true,
-    "max" : "100",
-    "progressValue" : "85",
 	"alertText" : "An alert is messaging that tells the user some information. Alerts can be error, warning, success, or info messages",
     "quoteText" : "A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation.",
     "quoteSource" : "<a href='https://en.wikipedia.org/wiki/Block_quotation'>Wikiepedia</a>",
     "img": {
-        "landscape-4x3": {
-            "src": "../../images/fpo_4x3.png",
-            "alt": "4x3 Image"
-        },
-        "landscape-16x9": {
-            "src": "../../images/fpo_hero.png",
-            "alt": "16x9 Image"
-        },
-        "avatar" : {
-            "src" : "../../images/fpo_avatar.png",
-            "alt" : "Person Name"
+        "article" : {
+            "src" : "../../images/airport.jpg",
+            "alt" : "Article about things"
         }
     },
+    "sectionQuickArticles": [
+        {
+            "headline" : "Airbus",
+            "info" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "headline" : "Airbus A320",
+            "info" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p> <p><a href=\"#\">Read more...</a></p>"
+        }
+    ],
+    "card" : {
+        "headline" : "Airport",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "sectionCardList" : [
+        {
+            "img": {
+                "article" : {
+                    "src" : "../../images/airport.jpg",
+                    "alt" : "Article about things"
+                }
+            },
+            "card" : {
+                "headline" : "Airport",
+                "about" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        },
+        {
+            "img": {
+                "article" : {
+                    "src" : "../../images/boarding_pass.png",
+                    "alt" : "Article about things"
+                }
+            },
+            "card" : {
+                "headline" : "Boarding Pass",
+                "about" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        },
+        {
+            "img": {
+                "article" : {
+                    "src" : "../../images/onboard.jpg",
+                    "alt" : "Article about things"
+                }
+            },
+            "card" : {
+                "headline" : "Onboard",
+                "about" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        },
+        {
+            "img": {
+                "article" : {
+                    "src" : "../../images/cockpit.jpg",
+                    "alt" : "Article about things"
+                }
+            },
+            "card" : {
+                "headline" : "Cockpit",
+                "about" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        }
+    ],
     "imgSquare" : {
-        "src": "../../images/fpo_square.png",
+        "src": "../../images/aa.jpg",
         "alt": "Square Image"
     },
     "imgHero" : {
-        "src": "../../images/fpo_hero.png",
+        "src": "../../images/airplane.jpg",
         "alt": "Hero Image"
-    },
-    "imgLandscape" : {
-        "src": "../../images/fpo_16x9.png",
-        "alt": "Landscape Image"
     },
     "headline" : {
         "short" : "Lorem ipsum dolor sit (37 characters)",
@@ -53,38 +102,58 @@
     "number" : "12",
     "primaryNav" : [
         {
-            "label": "About",
+            "label": "<i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home",
             "url": "link.pages-about"
         },
         {
-            "label": "Blog",
+            "label": "<i class=\"fa fa-plane\" aria-hidden=\"true\"></i> Airlines <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>",
             "url": "link.pages-blog-index"
         },
         {
-            "label": "Contact",
+            "label": "<i class=\"fa fa-info\" aria-hidden=\"true\"></i> Information <i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>",
             "url": "link.pages-contact"
         },
         {
-            "label": "Login",
+            "label": "<i class=\"fa fa-user\" aria-hidden=\"true\"></i> Login",
             "url": "link.pages-login"
         }
     ],
     "footerNav" : [
         {
-            "label": "About",
-            "url": "link.pages-about"
+            "imgSquare": {
+                    "src": "../../images/sas.png",
+                    "alt": "sas"
+            }
         },
         {
-            "label": "Blog",
-            "url": "link.pages-blog-index"
+            "imgSquare": {
+                    "src": "../../images/aa.jpg",
+                    "alt": "aa"
+            }
         },
         {
-            "label": "Contact",
-            "url": "link.pages-contact"
+            "imgSquare": {
+                    "src": "../../images/ca.png",
+                    "alt": "ca"
+            }
         },
         {
-            "label": "Login",
-            "url": "link.pages-login"
+            "imgSquare": {
+                    "src": "../../images/sa.jpg",
+                    "alt": "sa"
+            }
+        },
+        {
+            "imgSquare": {
+                    "src": "../../images/ariana.jpg",
+                    "alt": "ariana"
+            }
+        },
+        {
+            "imgSquare": {
+                    "src": "../../images/tarom.jpg",
+                    "alt": "tarom"
+            }
         }
     ],
     "url" : "#",
@@ -229,8 +298,8 @@
 		{
 			"url" : "#",
 			"number" : "10"
-		}				
-	],			
+		}
+	],
     "sectionBlock" : true,
     "textButton" : true,
 	"overlayMessage" : "Let's go on a hike and climb in elevation",

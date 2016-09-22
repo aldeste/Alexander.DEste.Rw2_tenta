@@ -1,3 +1,66 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer {
+  color: $porcelain;
+  background: $woodsmoke;
+}
+
+.footer__container {
+  @extend .container;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  @include apply-if('plant') {
+    flex-flow: row;
+  }
+}
+
+.footer__form * {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  @include apply-if('plant') {
+    order: 1;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  max-width: 100%;
+  flex-flow: row;
+
+  @include apply-if('plant') {
+    flex-flow: row wrap;
+  }
+}
+
+.footer__mediacontainer {
+  flex: 1;
+  padding-left: 0.8rem;
+
+  @include apply-if('plant') {
+    flex: 1 33%;
+  }
+}
+
+.footer__media {
+  width: 100%;
+  height: auto;
+}
+
+.footer__component {
+  display: flex;
+  flex-flow: column;
+  padding: 1em;
+  @include apply-if('plant') {
+    flex: 1 50%;
+  }
+}
+
+.footer__text {
+  @include apply-if('plant') {
+    order: 1;
+  }
+}

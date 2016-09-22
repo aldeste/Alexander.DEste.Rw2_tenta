@@ -1,3 +1,22 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.button {
+  padding: 1.4rem;
+  transition: make-transition('background', 'fast', 'fade');
+  text-align: center;
+  vertical-align: middle;
+  color: $porcelain;
+  border: 0;
+  background: $royal-blue;
+
+  &:hover,
+  &:focus {
+    background: mix($royal-blue, $baltic-sea, 80%);
+  }
+
+  &:active {
+    background: mix($royal-blue, $porcelain, 90%);
+  }
+}

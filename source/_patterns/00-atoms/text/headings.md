@@ -2,4 +2,4 @@
 title: Headings
 ---
 
-[Insert description here]
+Headlines used across site

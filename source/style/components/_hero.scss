@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+}
+
+.hero__text {
+  position: absolute;
+  z-index: z('above-images');
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+  color: $porcelain;
+  line-height: 1;
+}
+
+.hero__headline {
+  font-size: 35px;
+  border: 0.3rem solid $white;
+  padding: 1.4rem 2rem;
+  text-transform: uppercase;
+
+  span {
+    color: $woodsmoke;
+    background: $white;
+    padding: 0rem 0.4rem;
+  }
+}
+
+.hero__subheadline {
+  background: $white;
+  color: $woodsmoke;
+  display: inline-block;
+  padding: 0.8rem;
+  color: $mid-gray;
+}
+
+.hero__media {
+  z-index: z('default');
+  max-width: 100vw;
+}

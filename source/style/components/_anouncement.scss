@@ -1,0 +1,22 @@
+.anouncements {
+  display: none;
+
+  @include apply-if('sprout') {
+    display: flex;
+    flex-flow: row;
+    max-width: $max-width;
+    margin: auto;
+  }
+}
+
+.anouncement {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.anouncement__headline {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0;
+}

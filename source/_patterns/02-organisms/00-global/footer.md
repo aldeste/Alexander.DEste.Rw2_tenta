@@ -2,4 +2,4 @@
 title: Footer
 ---
 
-[Insert description here]
+Footer

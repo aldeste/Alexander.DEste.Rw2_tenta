@@ -56,11 +56,11 @@ gulp.task('louis', () => {
     userAgent: 'Chrome/37.0.2062.120',
     noExternals: false,
     performanceBudget: {
-      cssSize: 50,
+      cssSize: 2550,
       cssCount: 1,
       jsCount: 1,
-      requests: 3,
-      medianLatency: 10,
+      requests: 25,
+      medianLatency: 100,
       slowestResponse: 1000
     }
   });
