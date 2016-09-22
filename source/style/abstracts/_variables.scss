@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// Contains all global variables
+// -----------------------------------------------------------------------------
+
+/// Colors across project
+/// @type Color
+$text-color: rgb(34, 34, 34);
+$brand-color: rgb(229, 0, 80);
+$light-grey: rgb(237, 237, 237);
+$mid-grey: rgb(153, 153, 153);
+$dark-grey: rgb(68, 68, 68);
+
+/// Regular font family
+/// @type List
+$text-font-stack: (
+  'Helvetica Neue Light',
+  'Helvetica Neue',
+  'Helvetica',
+  'Arial',
+  sans-serif,
+);
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: (
+  'Monaco',
+  'Courier New',
+  'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono',
+  monospace,
+);
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px;
+
+/// Breakpoints map
+/// @prop {String} keys - Name of break point, unrelated to devices
+/// @prop {Length} values - Length of brekapoint
+$breakpoints: (
+  'seed': 320px,
+  'sprout': 768px,
+  'plant': 1024px,
+);
+
+/// Z-indexes map
+/// @prop {String} key - Layer, semantic name
+/// @prop {Number} value - Z value of key
+$z-indexes: (
+  'modal': 900,
+  'default': 1,
+);
+
+/// Animation speed map
+/// @prop {String} keys - Time length name
+/// @prop Length values - Time length
+$animation-speed: (
+  'fast': 88.87ms,
+  'normal': 0.3s,
+  'slow': 675ms,
+);
+
+/// Animation curves map
+/// @prop {String} keys - Transition name
+/// @prop {???} values - Which transition to use
+$animation-curves: (
+  'animate-out': cubic-bezier(0.895, 0.03, 0.685, 0.22),
+  'animate-in': cubic-bezier(0.165, 0.84, 0.44, 1),
+  'animate-on-page': cubic-bezier(0.77, 0, 0.175, 1),
+  'fade': linear,
+);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+$base-url: '/assets/';

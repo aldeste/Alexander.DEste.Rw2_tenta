@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// Contains all global mixins
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin apply-if($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media (min-width: #{$query}) {
+      @content;
+    }
+  } @else {
+    @error '`#{$breakpoint}` not found in `$breakpoints`, check for typos and make sure it\'s defined';
+  }
+}
+
+/// Responsive typography helpers
+/// @author Alexander D'Este
+/// @param {String} $property - Which property to make responsive
+/// @param {Length} $min-value - Minimum length of property
+/// @param {Length} $max-value - Maximum length of property
+/// @param {Length} $min-bp - Minimum length of breakpoint
+/// @param {Length} $max-bp - Maximum length of breakpoint
+@mixin scaling-by-calc($property, $min-value, $max-value, $min-bp, $max-bp) {
+  #{$property}: $min-value;
+
+  @media screen and (min-width: $min-bp) {
+    #{$property}: calc(
+      #{$min-value} + #{remove-unit($max-value - $min-value)} *
+      ((100vw - #{$min-bp}) / #{remove-unit($max-bp - $min-bp)})
+    );
+  }
+
+  @media screen and (min-width: $max-bp) {
+    #{$property}: $max-value;
+  }
+}

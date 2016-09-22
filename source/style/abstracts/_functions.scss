@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// Contains all global functions
+// -----------------------------------------------------------------------------
+
+/// Return location of files
+/// @param {String} $base - base URL for the asset
+/// @param {String} $type - asset type folder (e.g. `fonts/`)
+/// @param {String} $path - asset path
+/// @return {Url}
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+/// Returns URL to an image based on its path
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+}
+
+/// Returns URL to a font based on its path
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+@function font($path, $base: $base-url) {
+  @return asset($base, 'fonts/', $path);
+}
+
+/// Get a z-index value from a layer name
+/// @param {String} $layer - Layer's name
+/// @return {Number}
+/// @require $z-indexes
+@function z($layer) {
+  @if not map-has-key($z-indexes, $layer) {
+    @error '`#{$layer}` not found in `$z-indexes`.';
+  }
+
+  @return map-get($z-indexes, $layer);
+}
+
+/// Animate property
+/// @param {String} $property - Property transition will affect
+/// @param {Length} $speed - Transition duration
+/// @param {String} $curve - Transition curve
+/// @return {String}
+/// @require $animation-speed
+/// @require $animation-curves
+@function make-transition($property, $speed, $curve) {
+  @if not map-has-key($animation-speed, $speed) {
+    @error '`#{$speed}` not found in `$animation-speed`.';
+  }
+
+  @if not map-has-key($animation-curves, $curve) {
+    @error '`#{$curve}` not found in `$animation-curves`.';
+  }
+
+  @return
+    #{$property}
+    map-get($animation-speed, $speed)
+    map-get($animation-curves, $curve);
+}
+
+/// Remove unit
+/// @param {Length} $n - Number who's unit will be strpped
+/// @return {Number}
+@function remove-unit($n) {
+  @return $n / ($n - $n + 1);
+}

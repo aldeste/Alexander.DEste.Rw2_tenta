@@ -2,4 +2,20 @@
 export/*
 public/*
 source/styleguide/*
+
+# COMPOSER
+composer.lock
 vendor/*
+composer.phar
+
+# NODE
+logs
+*.log
+npm-debug.log*
+node_modules/*
+coverage
+
+# LINT
+.eslintrc
+.scss-lint.yml
+.csscomb.json

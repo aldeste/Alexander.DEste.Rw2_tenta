@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+
+// Sass tools and helpers used across the project.
+// Every global variable, function, mixin and placeholder should be put in here.
+// The rule of thumb for this folder is that it should not output a single line
+// of CSS when compiled on its own. These are nothing but Sass helpers.
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// CSS files from external libraries and frameworks
+@import
+  'vendor/normalize';
+
+// The `base/` folder holds the boilerplate code for the project.
+// In there, you might find some typographic rules, and probably a stylesheet
+// defining some standard styles for commonly used HTML elements.
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// This folder could have stylesheets for the main parts of the site
+// (header, footer, navigation, sidebar…), the grid system or even CSS
+// styles for all the forms.
+@import
+  'layout/header',
+  'layout/footer';
+
+// For small components, there is the `components/` folder.
+// It contains all kind of specific modules like a slider, a loader, a widget,
+// and basically anything along those lines.
+@import
+  'components/button';
+
+// If you have page-specific styles, it is better to put them
+// in a `pages/` folder, in a file named after the page
+@import
+  'pages/home';
+
+// On large sites and applications, it is not unusual to have different themes.
+// @import
+//   'themes/default';
+
+// Shame contains all the quick fixes that have not been implemented in their
+// correct files
+@import 'shame';

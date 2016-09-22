@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// Simple basic styles
+// -----------------------------------------------------------------------------
+
+/**
+ * Use border-box box model. Box sixing will be inherited from parent later on,
+ * this makes sure we're not breaking future case plugins that might now be
+ * using box-sizing: border-box.
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Inherit the box-sizing from a parent DOM element. Does not override html
+ * since * has a specificity of 0.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

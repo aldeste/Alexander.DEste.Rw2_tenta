@@ -1,0 +1,7 @@
+/**
+ * Basic typography style for copy text and ui elements
+ */
+:root {
+  color: $text-color;
+  font: normal 1.25em / 1.53 $text-font-stack;
+}
